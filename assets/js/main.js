@@ -40,6 +40,15 @@
     el.addEventListener('scroll', listener)
   }
 
+  const getCurrentYear = (callback) => {
+            const year = new Date().getFullYear();
+            callback(year);
+        };
+
+        getCurrentYear((year) => {
+            document.getElementById("year").textContent = year;
+        });
+
   /**
    * Navbar links active state on scroll
    */
